@@ -1,12 +1,7 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
-import Form from "./Forms/Form";
-import FruitList from "./Fruits/FruitList";
-import Counter from "./Counter/Counter";
-import ToggleName from "./toggle/toggleName";
+import Page from "./LanguageSwitcher/Page";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <Counter initialValue={6} />
-);
+root.render(<Page/>);
