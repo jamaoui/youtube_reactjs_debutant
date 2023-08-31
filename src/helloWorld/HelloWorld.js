@@ -3,8 +3,9 @@
         return <h1>Hello {lastName} {age>= 18 ? 'Adult' : 'Minor'}</h1>
 }*/
 
+import {AppContext} from '../Context/App'
 import {Component} from "react";
-export default class HelloWorld extends Component {
+class HelloWorld extends Component {
     age = 15
     timer = null
     clickBody = () => {
@@ -12,10 +13,10 @@ export default class HelloWorld extends Component {
     }
     componentDidMount() {
         console.log('component mounted')
-        document.addEventListener('click', this.clickBody)
-        this.timer = setInterval(() => {
-            console.log('a')
-        },1000)
+        //document.addEventListener('click', this.clickBody)
+        //this.timer = setInterval(() => {
+        //    console.log('a')
+        //},1000)
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -29,6 +30,13 @@ export default class HelloWorld extends Component {
     }
 
     render() {
-        return <h1>Hello {this.props.lastName} {this.age>= 18 ? 'Adult' : 'Minor'}</h1>
+        return (<>
+            <AppContext.Consumer>
+                {context=> (
+                    <h1 style={(context.isDarkMode)?{color:'white'}:{color:'red'}}>Hello {this.props.lastName} {this.age>= 18 ? 'Adult' : 'Minor'}</h1>
+                )}
+            </AppContext.Consumer>
+            </>)
     }
 }
+export default HelloWorld

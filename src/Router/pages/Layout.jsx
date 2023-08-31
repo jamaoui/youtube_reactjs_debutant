@@ -1,10 +1,14 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
+import {COLORS} from "../../config/design-system/colors";
 
 function Layout() {
+    const navContainerStyle = {
+        backgroundColor: COLORS.primary
+    }
     return (
         <>
-            <nav className='navbar-dark bg-primary nav justify-content-center'>
+            <nav style={navContainerStyle} className='navbar-dark nav justify-content-center'>
                     <li className="nav-item">
                         <Link to='/' className='nav-link text-light'>Home</Link>
                     </li>
