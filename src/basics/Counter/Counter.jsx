@@ -1,15 +1,6 @@
 import React, {useEffect, useState} from "react";
 
 export default function Counter({initialValue = 0,step = 1}) {
-
-    // Hooks
-    // useState()...
-    // useEffect()...
-
-
-
-
-
     const [count, setCount] = useState(initialValue)
     const [time, setTime] = useState(new Date())
     let timer = null

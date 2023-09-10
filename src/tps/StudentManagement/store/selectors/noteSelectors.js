@@ -1,0 +1,2 @@
+export const getNotesByStudentId = id => state => state.notes.notes.filter((note) => note.idStudent === id)
+export const getNoteById = id => state => state.notes.notes.filter((note) => note.id === id)[0]

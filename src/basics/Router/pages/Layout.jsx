@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
-import {COLORS} from "../../config/design-system/colors";
+import {COLORS} from "../../../config/design-system/colors";
 
 function Layout() {
     const navContainerStyle = {

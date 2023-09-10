@@ -1,5 +1,5 @@
 import React from 'react';
-import {COLORS} from "../../config/design-system/colors";
+import {COLORS} from "../../../config/design-system/colors";
 import styles from './blogs.module.scss'
 // CSS IN JS
 

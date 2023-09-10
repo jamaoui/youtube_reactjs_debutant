@@ -3,7 +3,7 @@
         return <h1>Hello {lastName} {age>= 18 ? 'Adult' : 'Minor'}</h1>
 }*/
 
-import {AppContext} from '../Context/App'
+import {AppContext} from '../hooks/Context/App'
 import {Component} from "react";
 class HelloWorld extends Component {
     age = 15

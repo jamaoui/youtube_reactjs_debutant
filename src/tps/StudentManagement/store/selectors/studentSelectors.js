@@ -1,0 +1,1 @@
+export const studentListSelector = ({students}) => students.students

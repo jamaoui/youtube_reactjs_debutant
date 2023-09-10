@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {AppContext} from './App'
-import HelloWorld from "../helloWorld/HelloWorld";
+import HelloWorld from "../../helloWorld/HelloWorld";
 
 function Card({title, body}) {
     const context = useContext(AppContext)
