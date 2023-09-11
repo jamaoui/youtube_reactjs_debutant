@@ -5,17 +5,15 @@ import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import {Provider} from "react-redux";
 import store from "./Redux/store";
-import App from "./tps/StudentManagement/App";
+import User from "./basics/PropTypes/User";
+import HelloWorld from "./basics/helloWorld/HelloWorld";
 import Animation from "./tps/Animation/Animation";
-import CounterClick from "./Hoc/CounterClick";
-import CounterHover from "./Hoc/CounterHover";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
         <Provider store={store}>
-            <CounterClick/>
-            <CounterHover title={'Counter'} color={'bg-danger'}/>
+            <Animation/>
         </Provider>
     </>
 );
