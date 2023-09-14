@@ -6,9 +6,9 @@ function CounterClick({increment, count,title,color}) {
             <h1 className={'display-4 text-primary'}>{title}</h1>
             <div className="btn-group" role="group">
 
-                <button className={`btn btn-primary ${color}`} onClick={increment}>Click to increment !!
+                <button data-testid={'increment'} className={`btn btn-primary ${color}`} onClick={increment}>Click to increment !!
                 </button>
-                <button className={`btn btn-primary disabled ${color}`}> ==> {count}</button>
+                <button data-testid={'count'} className={`btn btn-primary disabled ${color}`}> ==> {count}</button>
             </div>
         </div>
     </>
